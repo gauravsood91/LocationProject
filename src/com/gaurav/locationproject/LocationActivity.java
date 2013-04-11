@@ -69,9 +69,10 @@ public class LocationActivity extends Activity {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
+						String locationURL="http://maps.googleapis.com/maps/api/distancematrix/xml?origins="+latitude+","+longitude+"&destinations=Pimpri+IN&mode=road&language=en-EN&sensor=false";
 						ParseXML parser = new ParseXML();
 						try {
-							distanceToLocation = parser.parseXML("http://maps.googleapis.com/maps/api/distancematrix/xml?origins=Khadki+IN&destinations=Pimpri+IN&mode=road&language=en-EN&sensor=false");
+							distanceToLocation = parser.parseXML(locationURL);
 						} catch (SAXException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
